@@ -6,6 +6,7 @@ public class Terrain {
     Predator[] m_PredatorArray;
     Plant[] m_PlantArray;
 
+    public boolean m_bHasStillLivingCreature;
     //Je demande à ce qu'on m'indique le nombre d'éléments dans mes tableaux
     //lors de la construction de mon terrain
     public Terrain(int p_iNbElements) {
@@ -35,5 +36,19 @@ public class Terrain {
             m_PredatorArray[i].drink(m_WaterSpot);
             m_PreyArray[i].drink(m_WaterSpot);
         }
+    }
+
+    public void step() {
+        for (Predator p : m_PredatorArray) {
+            p.step();
+        }
+
+    }
+
+    //Methode pour simuler la pluie qui va reremplir le plan d'eau
+    public void rain(int p_iQuantityWaterRained) {
+        //Méthode appelée sur le plan d'eau pour lui signaler qu'il a plu
+        //et qu'il y a donc de l'eau qui a rerempli le bassin
+        m_WaterSpot.refill(p_iQuantityWaterRained);
     }
 }

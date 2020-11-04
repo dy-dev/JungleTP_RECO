@@ -62,4 +62,15 @@ public class Predator {
 
     }
 
+    void step(){
+        //Si il ne chasse pas, qu'il ne respose pas et qu'il ne boit pas déjà
+        //il a une probabilité de commencer à avoir soif et de chercher à se désaltérer
+        //Et si il commence à avoir soif alors il se dirige vers le plan d'eau
+        //pour aller boire
+
+
+        //Sinon il essaie de renifler ou de voir si il ne voit pas une proie pas loin et
+        //si il en repere une il se met à chasser
+        //...
+    }
 }

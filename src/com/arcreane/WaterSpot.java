@@ -38,4 +38,8 @@ public class WaterSpot {
         m_iTotalWaterQuantity -= waterReturned;
         return waterReturned;
     }
+
+    public void refill(int p_iQuantityWaterRained) {
+        m_iTotalWaterQuantity += p_iQuantityWaterRained;
+    }
 }
